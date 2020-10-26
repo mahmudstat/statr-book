@@ -15,7 +15,7 @@ pie(
      init.angle = 130, border = NA )
 ```
 
-<img src="03-analysis-base_files/figure-html/unnamed-chunk-1-1.png" width="672" />
+![](03-analysis-base_files/figure-epub3/unnamed-chunk-1-1.png)<!-- -->
 
 ### Bar Chart
 
@@ -31,7 +31,7 @@ pie(
 
 ### Time Series Plots/Line Chart
 
-###Scatter Plot
+### Scatter Plot
 
 ### Equation and Curves
 

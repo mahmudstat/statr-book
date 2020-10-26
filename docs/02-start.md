@@ -1,6 +1,6 @@
-# Week 01: Getting Started with Statistics and R {#start}
+# Getting Started with Statistics and R {#start}
 
-## Session 01
+## Segment 01
 
 ### What is Statistics? 
 
@@ -299,7 +299,7 @@ seq(1,50, length.out = 5) # Generating specific amount of numbers.
 - [x] Books
 - [x] Coursera, Edx, and other MOOCs. 
 
-## Week 01: Session 02
+## Segemnt 02
 
 ### Vector
 
@@ -501,9 +501,9 @@ Table: (\#tab:df)An Example Data Frame
 
 |  x|y        |  w|  v|
 |--:|:--------|--:|--:|
-| 10|Dhaka    | 70| 20|
-| 12|Cumilla  | 33| 21|
-| 15|Rajshahi |  8| 22|
+| 10|Dhaka    | 45| 20|
+| 12|Cumilla  | 20| 21|
+| 15|Rajshahi | 61| 22|
 
 
 ```r
@@ -511,7 +511,7 @@ df[2,3] # Extracts value from the third column in the second row.
 ```
 
 ```
-## [1] 33
+## [1] 20
 ```
 
 ### List
@@ -600,29 +600,4 @@ sum
 <span>Contents from Jafar Sir</span>
 
 ### Apply family (apply, lapply, sapply, etc.). 
-
-
-# Week 02: Data Manipulation (Base R and tidyverse)
-
-<h2>Week 02 : Session 01</h2> 
-
-### Reading Data from Different Files 
-
-**Reading Data in Base R**
-
-Use `read.csv` function. 
-
-Reading Data Using tidyverse
-
-Reading Data Using data.table
-
-#### Switching to And from Excel, Stata, and SPSS
-
-Instant Copy from Excel and Should One Do So? 
-
-Handling Missing Values
-
-
-Subsetting/Filtering Data
-
 
