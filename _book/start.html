@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 1 Week 01: Getting Started with Statistics and R | Statistics with R</title>
+  <meta name="description" content="This is a short introduction on Statistics with R." />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 1 Week 01: Getting Started with Statistics and R | Statistics with R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a short introduction on Statistics with R." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 1 Week 01: Getting Started with Statistics and R | Statistics with R" />
+  
+  <meta name="twitter:description" content="This is a short introduction on Statistics with R." />
+  
+
+<meta name="author" content="Abdullah Al Mahmud" />
+
+
+<meta name="date" content="2020-10-26" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="about-author.html"/>
+<link rel="next" href="week-02-data-manipulation-base-r-and-tidyverse.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Statistics with R</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="" data-path="about-author.html"><a href="about-author.html"><i class="fa fa-check"></i>About Author</a></li>
+<li class="chapter" data-level="1" data-path="start.html"><a href="start.html"><i class="fa fa-check"></i><b>1</b> Week 01: Getting Started with Statistics and R</a><ul>
+<li class="chapter" data-level="1.1" data-path="start.html"><a href="start.html#session-01"><i class="fa fa-check"></i><b>1.1</b> Session 01</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="start.html"><a href="start.html#what-is-statistics"><i class="fa fa-check"></i><b>1.1.1</b> What is Statistics?</a></li>
+<li class="chapter" data-level="1.1.2" data-path="start.html"><a href="start.html#statistics-vs-data-science"><i class="fa fa-check"></i><b>1.1.2</b> Statistics vs Data Science</a></li>
+<li class="chapter" data-level="1.1.3" data-path="start.html"><a href="start.html#statistics-vs-mathematics"><i class="fa fa-check"></i><b>1.1.3</b> Statistics vs Mathematics</a></li>
+<li class="chapter" data-level="1.1.4" data-path="start.html"><a href="start.html#why-r"><i class="fa fa-check"></i><b>1.1.4</b> Why R?</a></li>
+<li class="chapter" data-level="1.1.5" data-path="start.html"><a href="start.html#who-use-r"><i class="fa fa-check"></i><b>1.1.5</b> Who Use R?</a></li>
+<li class="chapter" data-level="1.1.6" data-path="start.html"><a href="start.html#who-developed-r"><i class="fa fa-check"></i><b>1.1.6</b> Who Developed R?</a></li>
+<li class="chapter" data-level="1.1.7" data-path="start.html"><a href="start.html#other-languages-and-packages"><i class="fa fa-check"></i><b>1.1.7</b> Other Languages and Packages</a></li>
+<li class="chapter" data-level="1.1.8" data-path="start.html"><a href="start.html#installing-r-and-rstudio"><i class="fa fa-check"></i><b>1.1.8</b> Installing R and Rstudio</a></li>
+<li class="chapter" data-level="1.1.9" data-path="start.html"><a href="start.html#start-writing-r-code-windows-linux-and-command-line"><i class="fa fa-check"></i><b>1.1.9</b> Start Writing R Code (Windows, Linux, and Command Line)</a></li>
+<li class="chapter" data-level="1.1.10" data-path="start.html"><a href="start.html#effectively-using-rstudio"><i class="fa fa-check"></i><b>1.1.10</b> Effectively Using Rstudio</a></li>
+<li class="chapter" data-level="1.1.11" data-path="start.html"><a href="start.html#r-script"><i class="fa fa-check"></i><b>1.1.11</b> R Script</a></li>
+<li class="chapter" data-level="1.1.12" data-path="start.html"><a href="start.html#r-documentation-help"><i class="fa fa-check"></i><b>1.1.12</b> R Documentation (Help)</a></li>
+<li class="chapter" data-level="1.1.13" data-path="start.html"><a href="start.html#handling-error"><i class="fa fa-check"></i><b>1.1.13</b> Handling Error</a></li>
+<li class="chapter" data-level="1.1.14" data-path="start.html"><a href="start.html#r-packages"><i class="fa fa-check"></i><b>1.1.14</b> R Packages</a></li>
+<li class="chapter" data-level="1.1.15" data-path="start.html"><a href="start.html#r-mathematical-operations"><i class="fa fa-check"></i><b>1.1.15</b> R Mathematical Operations</a></li>
+<li class="chapter" data-level="1.1.16" data-path="start.html"><a href="start.html#assigning-values"><i class="fa fa-check"></i><b>1.1.16</b> Assigning Values</a></li>
+<li class="chapter" data-level="1.1.17" data-path="start.html"><a href="start.html#generating-multiple-numbers"><i class="fa fa-check"></i><b>1.1.17</b> Generating Multiple Numbers</a></li>
+<li class="chapter" data-level="1.1.18" data-path="start.html"><a href="start.html#data-types"><i class="fa fa-check"></i><b>1.1.18</b> Data Types</a></li>
+<li class="chapter" data-level="1.1.19" data-path="start.html"><a href="start.html#learn-more"><i class="fa fa-check"></i><b>1.1.19</b> Learn More</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="start.html"><a href="start.html#week-01-session-02"><i class="fa fa-check"></i><b>1.2</b> Week 01: Session 02</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="start.html"><a href="start.html#vector"><i class="fa fa-check"></i><b>1.2.1</b> Vector</a></li>
+<li class="chapter" data-level="1.2.2" data-path="start.html"><a href="start.html#matrix"><i class="fa fa-check"></i><b>1.2.2</b> Matrix</a></li>
+<li class="chapter" data-level="1.2.3" data-path="start.html"><a href="start.html#data-frame"><i class="fa fa-check"></i><b>1.2.3</b> Data Frame</a></li>
+<li class="chapter" data-level="1.2.4" data-path="start.html"><a href="start.html#list"><i class="fa fa-check"></i><b>1.2.4</b> List</a></li>
+<li class="chapter" data-level="1.2.5" data-path="start.html"><a href="start.html#functions"><i class="fa fa-check"></i><b>1.2.5</b> Functions</a></li>
+<li class="chapter" data-level="1.2.6" data-path="start.html"><a href="start.html#loops-alternatives-and-comparison-with-other-languages"><i class="fa fa-check"></i><b>1.2.6</b> Loops (Alternatives and Comparison with Other Languages)</a></li>
+<li class="chapter" data-level="1.2.7" data-path="start.html"><a href="start.html#apply-family-apply-lapply-sapply-etc.."><i class="fa fa-check"></i><b>1.2.7</b> Apply family (apply, lapply, sapply, etc.).</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="week-02-data-manipulation-base-r-and-tidyverse.html"><a href="week-02-data-manipulation-base-r-and-tidyverse.html"><i class="fa fa-check"></i><b>2</b> Week 02: Data Manipulation (Base R and tidyverse)</a><ul>
+<li class="chapter" data-level="2.0.1" data-path="week-02-data-manipulation-base-r-and-tidyverse.html"><a href="week-02-data-manipulation-base-r-and-tidyverse.html#reading-data-from-different-files"><i class="fa fa-check"></i><b>2.0.1</b> Reading Data from Different Files</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="rbase.html"><a href="rbase.html"><i class="fa fa-check"></i><b>3</b> Data Analysis: Base R</a><ul>
+<li class="chapter" data-level="3.1" data-path="rbase.html"><a href="rbase.html#session-01-visualization"><i class="fa fa-check"></i><b>3.1</b> Session 01: Visualization</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="rbase.html"><a href="rbase.html#correlation-plot"><i class="fa fa-check"></i><b>3.1.1</b> Correlation Plot</a></li>
+<li class="chapter" data-level="3.1.2" data-path="rbase.html"><a href="rbase.html#pie-chart"><i class="fa fa-check"></i><b>3.1.2</b> Pie Chart</a></li>
+<li class="chapter" data-level="3.1.3" data-path="rbase.html"><a href="rbase.html#bar-chart"><i class="fa fa-check"></i><b>3.1.3</b> Bar Chart</a></li>
+<li class="chapter" data-level="3.1.4" data-path="rbase.html"><a href="rbase.html#chart-characteristics-color-title-axes-etc."><i class="fa fa-check"></i><b>3.1.4</b> Chart Characteristics (color, title, axes etc.)</a></li>
+<li class="chapter" data-level="3.1.5" data-path="rbase.html"><a href="rbase.html#how-to-use-proper-legends"><i class="fa fa-check"></i><b>3.1.5</b> How to Use Proper Legends?</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="rbase.html"><a href="rbase.html#session-02-analysis"><i class="fa fa-check"></i><b>3.2</b> Session 02: Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="tidy-1.html"><a href="tidy-1.html"><i class="fa fa-check"></i><b>4</b> Data Analysis: Introduction to The Tidyverse</a><ul>
+<li class="chapter" data-level="4.1" data-path="tidy-1.html"><a href="tidy-1.html#reading-and-manipulating-data"><i class="fa fa-check"></i><b>4.1</b> Reading and Manipulating Data</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="week-02-data-manipulation-base-r-and-tidyverse.html"><a href="week-02-data-manipulation-base-r-and-tidyverse.html#reading-data-from-different-files"><i class="fa fa-check"></i><b>4.1.1</b> Reading Data from Different Files</a></li>
+<li class="chapter" data-level="4.1.2" data-path="tidy-1.html"><a href="tidy-1.html#concept-of-tidy-data"><i class="fa fa-check"></i><b>4.1.2</b> Concept of Tidy Data</a></li>
+<li class="chapter" data-level="4.1.3" data-path="tidy-1.html"><a href="tidy-1.html#how-to-make-data-tidy"><i class="fa fa-check"></i><b>4.1.3</b> How to Make Data Tidy?</a></li>
+<li class="chapter" data-level="4.1.4" data-path="tidy-1.html"><a href="tidy-1.html#subsettingfiltering-data"><i class="fa fa-check"></i><b>4.1.4</b> Subsetting/Filtering Data</a></li>
+<li class="chapter" data-level="4.1.5" data-path="tidy-1.html"><a href="tidy-1.html#pipe-operator"><i class="fa fa-check"></i><b>4.1.5</b> Pipe Operator</a></li>
+<li class="chapter" data-level="4.1.6" data-path="tidy-1.html"><a href="tidy-1.html#transforming-data"><i class="fa fa-check"></i><b>4.1.6</b> Transforming Data</a></li>
+<li class="chapter" data-level="4.1.7" data-path="tidy-1.html"><a href="tidy-1.html#summarizing-data"><i class="fa fa-check"></i><b>4.1.7</b> Summarizing Data</a></li>
+<li class="chapter" data-level="4.1.8" data-path="tidy-1.html"><a href="tidy-1.html#selecting-rows-and-columns"><i class="fa fa-check"></i><b>4.1.8</b> Selecting Rows and Columns</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="tidy-1.html"><a href="tidy-1.html#vizualizing-data"><i class="fa fa-check"></i><b>4.2</b> Vizualizing Data</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="tidy-1.html"><a href="tidy-1.html#how-ggplot2-works"><i class="fa fa-check"></i><b>4.2.1</b> How ggplot2 works</a></li>
+<li class="chapter" data-level="4.2.2" data-path="tidy-1.html"><a href="tidy-1.html#different-geoms-and-aesthetics"><i class="fa fa-check"></i><b>4.2.2</b> Different geoms and aesthetics</a></li>
+<li class="chapter" data-level="4.2.3" data-path="tidy-1.html"><a href="tidy-1.html#scatter-plot"><i class="fa fa-check"></i><b>4.2.3</b> Scatter Plot</a></li>
+<li class="chapter" data-level="4.2.4" data-path="rbase.html"><a href="rbase.html#bar-chart"><i class="fa fa-check"></i><b>4.2.4</b> Bar Chart</a></li>
+<li class="chapter" data-level="4.2.5" data-path="tidy-1.html"><a href="tidy-1.html#histogram"><i class="fa fa-check"></i><b>4.2.5</b> Histogram</a></li>
+<li class="chapter" data-level="4.2.6" data-path="tidy-1.html"><a href="tidy-1.html#boxplot"><i class="fa fa-check"></i><b>4.2.6</b> Boxplot</a></li>
+<li class="chapter" data-level="4.2.7" data-path="tidy-1.html"><a href="tidy-1.html#time-series-plotsline-chart"><i class="fa fa-check"></i><b>4.2.7</b> Time Series Plots/Line Chart</a></li>
+<li class="chapter" data-level="4.2.8" data-path="rbase.html"><a href="rbase.html#pie-chart"><i class="fa fa-check"></i><b>4.2.8</b> Pie Chart</a></li>
+<li class="chapter" data-level="4.2.9" data-path="tidy-1.html"><a href="tidy-1.html#trends-within-plots"><i class="fa fa-check"></i><b>4.2.9</b> Trends within Plots</a></li>
+<li class="chapter" data-level="4.2.10" data-path="tidy-1.html"><a href="tidy-1.html#piping-output-to-ggplot2"><i class="fa fa-check"></i><b>4.2.10</b> Piping Output to ggplot2</a></li>
+<li class="chapter" data-level="4.2.11" data-path="tidy-1.html"><a href="tidy-1.html#piping-output-to-plots"><i class="fa fa-check"></i><b>4.2.11</b> Piping Output to Plots</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="tidy-2.html"><a href="tidy-2.html"><i class="fa fa-check"></i><b>5</b> Advanced Data Warngling with Tidyverse</a><ul>
+<li class="chapter" data-level="5.1" data-path="tidy-2.html"><a href="tidy-2.html#advanced-visualization"><i class="fa fa-check"></i><b>5.1</b> Advanced Visualization</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="tidy-2.html"><a href="tidy-2.html#correlogram"><i class="fa fa-check"></i><b>5.1.1</b> Correlogram</a></li>
+<li class="chapter" data-level="5.1.2" data-path="tidy-2.html"><a href="tidy-2.html#themes-and-legends"><i class="fa fa-check"></i><b>5.1.2</b> Themes and Legends</a></li>
+<li class="chapter" data-level="5.1.3" data-path="tidy-2.html"><a href="tidy-2.html#doughnut-chart"><i class="fa fa-check"></i><b>5.1.3</b> Doughnut Chart</a></li>
+<li class="chapter" data-level="5.1.4" data-path="tidy-2.html"><a href="tidy-2.html#density-chart"><i class="fa fa-check"></i><b>5.1.4</b> Density Chart</a></li>
+<li class="chapter" data-level="5.1.5" data-path="tidy-2.html"><a href="tidy-2.html#violin-chart"><i class="fa fa-check"></i><b>5.1.5</b> Violin Chart</a></li>
+<li class="chapter" data-level="5.1.6" data-path="tidy-2.html"><a href="tidy-2.html#bubble-chart"><i class="fa fa-check"></i><b>5.1.6</b> Bubble Chart</a></li>
+<li class="chapter" data-level="5.1.7" data-path="tidy-2.html"><a href="tidy-2.html#spiderradar-chart"><i class="fa fa-check"></i><b>5.1.7</b> Spider/Radar Chart</a></li>
+<li class="chapter" data-level="5.1.8" data-path="tidy-2.html"><a href="tidy-2.html#lollipop-chart"><i class="fa fa-check"></i><b>5.1.8</b> Lollipop Chart</a></li>
+<li class="chapter" data-level="5.1.9" data-path="tidy-2.html"><a href="tidy-2.html#area-chart"><i class="fa fa-check"></i><b>5.1.9</b> Area Chart</a></li>
+<li class="chapter" data-level="5.1.10" data-path="tidy-2.html"><a href="tidy-2.html#attaching-texts-to-plots"><i class="fa fa-check"></i><b>5.1.10</b> Attaching Texts to Plots</a></li>
+<li class="chapter" data-level="5.1.11" data-path="tidy-2.html"><a href="tidy-2.html#advanced-customization-and-attaining-what-seems-improbable"><i class="fa fa-check"></i><b>5.1.11</b> Advanced Customization And Attaining What Seems Improbable</a></li>
+<li class="chapter" data-level="5.1.12" data-path="tidy-2.html"><a href="tidy-2.html#animation"><i class="fa fa-check"></i><b>5.1.12</b> Animation</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="tidy-2.html"><a href="tidy-2.html#advanced-wrangling"><i class="fa fa-check"></i><b>5.2</b> Advanced Wrangling</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="modeling.html"><a href="modeling.html"><i class="fa fa-check"></i><b>6</b> Modeling</a><ul>
+<li class="chapter" data-level="6.1" data-path="modeling.html"><a href="modeling.html#regression"><i class="fa fa-check"></i><b>6.1</b> Regression</a></li>
+<li class="chapter" data-level="6.2" data-path="modeling.html"><a href="modeling.html#test"><i class="fa fa-check"></i><b>6.2</b> Test</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistics with R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="start" class="section level1">
+<h1><span class="header-section-number">Chapter 1</span> Week 01: Getting Started with Statistics and R</h1>
+<div id="session-01" class="section level2">
+<h2><span class="header-section-number">1.1</span> Session 01</h2>
+<div id="what-is-statistics" class="section level3">
+<h3><span class="header-section-number">1.1.1</span> What is Statistics?</h3>
+<p>The term has got three different meanings.</p>
+<ul>
+<li><strong>Plural of the term statistic</strong>, which refers to any function of sample values, for example, <span class="math inline">\(\bar x = \frac {\sum_i^n x_i} n\)</span></li>
+<li><strong>Table of values</strong></li>
+</ul>
+<table>
+<caption><span id="tab:unnamed-chunk-1">Table 1.1: </span>A Subset from Iris Data Set</caption>
+<thead>
+<tr class="header">
+<th align="right">Sepal.Length</th>
+<th align="right">Sepal.Width</th>
+<th align="right">Petal.Length</th>
+<th align="right">Petal.Width</th>
+<th align="left">Species</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">5.1</td>
+<td align="right">3.5</td>
+<td align="right">1.4</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">4.9</td>
+<td align="right">3.0</td>
+<td align="right">1.4</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">4.7</td>
+<td align="right">3.2</td>
+<td align="right">1.3</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">4.6</td>
+<td align="right">3.1</td>
+<td align="right">1.5</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">5.0</td>
+<td align="right">3.6</td>
+<td align="right">1.4</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">5.4</td>
+<td align="right">3.9</td>
+<td align="right">1.7</td>
+<td align="right">0.4</td>
+<td align="left">setosa</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Technique of dealing with data</strong>
+<ul>
+<li>Collecting data</li>
+<li>Organizing</li>
+<li>Analyzing
+Interpreting</li>
+<li>Presenting</li>
+</ul></li>
+</ul>
+</div>
+<div id="statistics-vs-data-science" class="section level3">
+<h3><span class="header-section-number">1.1.2</span> Statistics vs Data Science</h3>
+<p>Statistics deals mainly with analyzing and interpreting data, while data science deals more with predictive analytics. (<span>more</span>)</p>
+</div>
+<div id="statistics-vs-mathematics" class="section level3">
+<h3><span class="header-section-number">1.1.3</span> Statistics vs Mathematics</h3>
+<p>Consider the following equations</p>
+<ul>
+<li><span class="math inline">\(Y = X + 0.2 \times X\)</span></li>
+</ul>
+<p>Say, <span class="math inline">\(X\)</span> = Basic Salary of an employee in a company, while <span class="math inline">\(Y\)</span> is computed from <span class="math inline">\(X\)</span>, with adding to <span class="math inline">\(X\)</span> 20% of <span class="math inline">\(X\)</span>. In this scenario, given the values of <span class="math inline">\(X\)</span>, we can always tell what the gross salary would be.</p>
+<p>What if we have an equation such as the following:</p>
+<p><span class="math inline">\(Y = X + 0.1 \times R\)</span></p>
+<p>Where, <span class="math inline">\(R\)</span> is the revenue the company earns through the employee. In this case, the salary of the employee would vary in each month.</p>
+<p>The salaries from month to month would unpredictably vary, which is where statistics comes in. Statistics deals with randomness, situations where we cannot exactly tell which outcome we might get. We may (or may not) know the possible outcomes (like when tossing a coin, we know the possible outcome, but which will happen)</p>
+</div>
+<div id="why-r" class="section level3">
+<h3><span class="header-section-number">1.1.4</span> Why R?</h3>
+<p>R is the most popular programming language for statistical analysis, second most popular for machine learning.</p>
+<p>Reasons at a glance</p>
+<ul>
+<li>Free and Open Source Software (FOSS)</li>
+<li>Big Community</li>
+<li>Made by statisticians for statisticians</li>
+<li>Easy to use codes</li>
+<li>Stunning graphics, esp. with <em>ggplot2</em></li>
+<li>Reproducibility</li>
+</ul>
+</div>
+<div id="who-use-r" class="section level3">
+<h3><span class="header-section-number">1.1.5</span> Who Use R?</h3>
+<p>R is both used in academia and industry.</p>
+<ul>
+<li>Good analyses for theses are now accomplished using R.</li>
+<li>Industries heavily rely on R for statistical analysis, predictive analytics, and machine learning.</li>
+</ul>
+<p>Some of the renowned companies using R are:</p>
+<ul>
+<li>Google</li>
+<li>Facebook</li>
+<li>Twitter (Tweet sensitivity analysis)</li>
+</ul>
+</div>
+<div id="who-developed-r" class="section level3">
+<h3><span class="header-section-number">1.1.6</span> Who Developed R?</h3>
+<p>R was developed by Ross Ihaka and Robert Genetleman (<span>MORE</span>)</p>
+</div>
+<div id="other-languages-and-packages" class="section level3">
+<h3><span class="header-section-number">1.1.7</span> Other Languages and Packages</h3>
+<p>Some other languages for data analysis are:</p>
+<ul>
+<li>Python</li>
+<li>Julia</li>
+<li>Java</li>
+<li>Scala</li>
+</ul>
+<p><strong>Packages</strong></p>
+<ul>
+<li>SPSS</li>
+<li>STATA</li>
+<li>Eviews</li>
+</ul>
+</div>
+<div id="installing-r-and-rstudio" class="section level3">
+<h3><span class="header-section-number">1.1.8</span> Installing R and Rstudio</h3>
+<ul>
+<li><input type="checkbox" disabled="" checked="" />
+<a href="https://cran.r-project.org">Go to Cran</a> [^1]</li>
+</ul>
+</div>
+<div id="start-writing-r-code-windows-linux-and-command-line" class="section level3">
+<h3><span class="header-section-number">1.1.9</span> Start Writing R Code (Windows, Linux, and Command Line)</h3>
+<ul>
+<li>Using R Console directly: Not a good idea</li>
+<li>Using Rstudio Console: Equivalent to using R console</li>
+<li>Using R Script from Rstudio: to run, press <code>Ctrl + Enter</code></li>
+</ul>
+<p><strong>It is best to use Rstudio.</strong></p>
+</div>
+<div id="effectively-using-rstudio" class="section level3">
+<h3><span class="header-section-number">1.1.10</span> Effectively Using Rstudio</h3>
+<ul>
+<li><strong>Keep things organized</strong></li>
+<li><strong>Make a project</strong> Put all codes, data and output inside that project directory.</li>
+<li><strong>Use <code>View</code> function</strong> to view data tables.</li>
+</ul>
+</div>
+<div id="r-script" class="section level3">
+<h3><span class="header-section-number">1.1.11</span> R Script</h3>
+<p>An R script is a convenient tool to organize a work. A project may consist of several or many such scripts. They can be easily shared with others.</p>
+<div id="quoting-r-codes-from-another-r-file." class="section level4">
+<h4><span class="header-section-number">1.1.11.1</span> Quoting R codes from another R file.</h4>
+<p><code>source('r_file.R')</code></p>
+</div>
+</div>
+<div id="r-documentation-help" class="section level3">
+<h3><span class="header-section-number">1.1.12</span> R Documentation (Help)</h3>
+<p>To get help, type <code>?keyword</code> or <code>help(keyword)</code></p>
+<p>For example, <code>?mean</code> would show options and examples for the mean function.</p>
+</div>
+<div id="handling-error" class="section level3">
+<h3><span class="header-section-number">1.1.13</span> Handling Error</h3>
+<ul>
+<li>If the code is not run, and shows a <code>+</code> sign, it means the code is not complete yet complete it or press <code>esc</code> to start over.</li>
+<li>If the erros message shows <code>could not find function ...</code>, correct the function name.</li>
+<li>If you do not understand the error message, copy and paste it to your browser search bar, and see what help the community has to offer.</li>
+</ul>
+</div>
+<div id="r-packages" class="section level3">
+<h3><span class="header-section-number">1.1.14</span> R Packages</h3>
+<p>R packages are extensions of base R, providing some very useful tasks. Many R packages made R more popular and useful, such as <code>ggplot2</code>, <code>karet</code>, and <code>rmarkdown</code>.</p>
+<p>To install a packages, run <code>install.pckages("package_name")</code>, for example <code>install.pckages("tidyverse")</code> installs the package <code>tidyverse</code>. When installing, the package name must be enclosed within quotation marks (" ").</p>
+<p>Before being able to make use of a package, one must load the package, by running <code>library(package_name)</code>, for example, to load <code>ggplot2</code>, run <code>library(ggplot2)</code>, this time without quotation marks (" ").</p>
+</div>
+<div id="r-mathematical-operations" class="section level3">
+<h3><span class="header-section-number">1.1.15</span> R Mathematical Operations</h3>
+<ul>
+<li><input type="checkbox" disabled="" />
+Make a table: Purpose, code, example, output</li>
+</ul>
+</div>
+<div id="assigning-values" class="section level3">
+<h3><span class="header-section-number">1.1.16</span> Assigning Values</h3>
+<p>Variables make it easy to assign values and use them later.</p>
+<ul>
+<li>To assign values to variables, you can use either <code>=</code> or <code>&lt;-</code>, but in R, <code>&lt;-</code> is preferred. In Rstudio, pressing <code>alt + -</code> is a very good shortcut for correctly typing <code>&lt;-</code>.</li>
+<li>Comments start with <code>hash</code> (#)</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="start.html#cb1-1"></a>x &lt;-<span class="st">  </span><span class="dv">3</span></span>
+<span id="cb1-2"><a href="start.html#cb1-2"></a>y &lt;-<span class="st">  </span><span class="dv">4</span></span>
+<span id="cb1-3"><a href="start.html#cb1-3"></a>x<span class="op">+</span>y</span></code></pre></div>
+<pre><code>## [1] 7</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="start.html#cb3-1"></a>x<span class="op">*</span>y</span></code></pre></div>
+<pre><code>## [1] 12</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="start.html#cb5-1"></a>x<span class="op">+</span><span class="dv">10</span><span class="op">-</span>y</span></code></pre></div>
+<pre><code>## [1] 9</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="start.html#cb7-1"></a>x<span class="op">^</span>y</span></code></pre></div>
+<pre><code>## [1] 81</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="start.html#cb9-1"></a>x<span class="op">**</span>y</span></code></pre></div>
+<pre><code>## [1] 81</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="start.html#cb11-1"></a><span class="kw">log</span>(x)</span></code></pre></div>
+<pre><code>## [1] 1.098612</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="start.html#cb13-1"></a><span class="kw">round</span>(<span class="kw">log</span>(x), <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## [1] 1.099</code></pre>
+<div id="round-floor-and-ceiling" class="section level4">
+<h4><span class="header-section-number">1.1.16.1</span> Round, Floor, and Ceiling</h4>
+<p>Suppose, we have a number 3.9856</p>
+<ul>
+<li><code>round</code> rounds the number;</li>
+</ul>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="start.html#cb15-1"></a>x &lt;-<span class="st"> </span><span class="fl">3.9856</span></span>
+<span id="cb15-2"><a href="start.html#cb15-2"></a><span class="kw">round</span>(x,<span class="dv">3</span>) <span class="co"># (up to 3 digits)</span></span></code></pre></div>
+<pre><code>## [1] 3.986</code></pre>
+<ul>
+<li><code>celing</code> switches the number to the next integer;</li>
+</ul>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="start.html#cb17-1"></a><span class="kw">ceiling</span>(x)</span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<p><code>floor</code> gives the previous integer.</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="start.html#cb19-1"></a><span class="kw">floor</span>(x)</span></code></pre></div>
+<pre><code>## [1] 3</code></pre>
+<ul>
+<li><input type="checkbox" disabled="" checked="" />
+<code>celing</code> and <code>floor</code> always give integer output.</li>
+</ul>
+</div>
+</div>
+<div id="generating-multiple-numbers" class="section level3">
+<h3><span class="header-section-number">1.1.17</span> Generating Multiple Numbers</h3>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="start.html#cb21-1"></a>x &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">10</span></span>
+<span id="cb21-2"><a href="start.html#cb21-2"></a>x</span></code></pre></div>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="start.html#cb23-1"></a><span class="kw">seq</span>(<span class="dv">1</span>,<span class="dv">20</span>, <span class="dv">2</span>) <span class="co"># Keeping fixed gap between the numbers</span></span></code></pre></div>
+<pre><code>##  [1]  1  3  5  7  9 11 13 15 17 19</code></pre>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="start.html#cb25-1"></a><span class="kw">seq</span>(<span class="dv">1</span>,<span class="dv">50</span>, <span class="dt">length.out =</span> <span class="dv">5</span>) <span class="co"># Generating specific amount of numbers.</span></span></code></pre></div>
+<pre><code>## [1]  1.00 13.25 25.50 37.75 50.00</code></pre>
+</div>
+<div id="data-types" class="section level3">
+<h3><span class="header-section-number">1.1.18</span> Data Types</h3>
+<ul>
+<li>Logical</li>
+<li>Numeric
+<ul>
+<li>integer</li>
+<li>Double</li>
+</ul></li>
+<li>Character</li>
+</ul>
+</div>
+<div id="learn-more" class="section level3">
+<h3><span class="header-section-number">1.1.19</span> Learn More</h3>
+<ul>
+<li><input type="checkbox" disabled="" checked="" />
+Stat Mania artciles and link to contents</li>
+<li><input type="checkbox" disabled="" checked="" />
+Books</li>
+<li><input type="checkbox" disabled="" checked="" />
+Coursera, Edx, and other MOOCs.</li>
+</ul>
+</div>
+</div>
+<div id="week-01-session-02" class="section level2">
+<h2><span class="header-section-number">1.2</span> Week 01: Session 02</h2>
+<div id="vector" class="section level3">
+<h3><span class="header-section-number">1.2.1</span> Vector</h3>
+<p>A vector is set of similar items. In Linear Algebra, it is defined as a matrix with only one column or one row. It could contain numbers of different types, strings, or logical values.</p>
+<p>A vector makes it easy to simultaneously operate on multiple items.</p>
+<ul>
+<li><input type="checkbox" disabled="" checked="" />
+We make a vector when we are dealing with only one variable.</li>
+<li><input type="checkbox" disabled="" checked="" />
+A vector can contain only one type of values, such ac numeric, logical etc.</li>
+</ul>
+<p>A vector in <code>R</code> is usually made using <code>c</code>, which stands for <em>concatenate</em>. A vector can also be made using <code>seq</code> command shown earlier, or by using a <code>colon</code> (<code>:</code>) sign, if the values are successive integers.</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="start.html#cb27-1"></a>x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">7</span>)</span>
+<span id="cb27-2"><a href="start.html#cb27-2"></a>a &lt;-<span class="st"> </span><span class="dv">10</span><span class="op">:</span><span class="dv">12</span></span>
+<span id="cb27-3"><a href="start.html#cb27-3"></a>y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;green&quot;</span>, <span class="st">&quot;blue&quot;</span>, <span class="st">&quot;black&quot;</span>, <span class="st">&quot;orange&quot;</span>)</span>
+<span id="cb27-4"><a href="start.html#cb27-4"></a>z &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>, <span class="ot">TRUE</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>)</span></code></pre></div>
+<div id="adding-vectors" class="section level4">
+<h4><span class="header-section-number">1.2.1.1</span> Adding Vectors</h4>
+<ul>
+<li><p>If a scalar (a single value) is added to a vector, it would be added to values.</p></li>
+<li><p>If two (or more) vectors with equal lengths are added together, corresponding values would be added; the same goes for almost any other mathematical operation (such as subtraction or division).</p></li>
+<li><p>If, however, the lengths are unequal, the values of the smaller vector would be repeated from the beginning.</p></li>
+</ul>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="start.html#cb28-1"></a>x <span class="op">+</span><span class="st"> </span><span class="dv">3</span> <span class="co"># Adds 3 all values of x.</span></span></code></pre></div>
+<pre><code>## [1]  7  8 10</code></pre>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="start.html#cb30-1"></a>x <span class="op">+</span><span class="st"> </span>a <span class="co"># Corresponding values are added.</span></span></code></pre></div>
+<pre><code>## [1] 14 16 19</code></pre>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="start.html#cb32-1"></a>b &lt;-<span class="st"> </span><span class="dv">6</span><span class="op">:</span><span class="dv">7</span></span>
+<span id="cb32-2"><a href="start.html#cb32-2"></a>x <span class="op">+</span><span class="st"> </span>b <span class="co"># Values of b are repeated. </span></span></code></pre></div>
+<pre><code>## Warning in x + b: longer object length is not a multiple of shorter object
+## length</code></pre>
+<pre><code>## [1] 10 12 13</code></pre>
+</div>
+<div id="indexing-vectors" class="section level4">
+<h4><span class="header-section-number">1.2.1.2</span> Indexing Vectors</h4>
+<ul>
+<li><p>Using <code>[]</code>:</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="start.html#cb35-1"></a>x</span></code></pre></div>
+<pre><code>## [1] 4 5 7</code></pre>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="start.html#cb37-1"></a>x[<span class="dv">2</span>] <span class="co"># Extracts the second value.</span></span></code></pre></div>
+<pre><code>## [1] 5</code></pre>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="start.html#cb39-1"></a>x[<span class="dv">2</span><span class="op">:</span><span class="dv">3</span>] <span class="co"># Extracts second through third values.</span></span></code></pre></div>
+<pre><code>## [1] 5 7</code></pre>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="start.html#cb41-1"></a>x[<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>)] <span class="co"># Extracts the first and third values.</span></span></code></pre></div>
+<pre><code>## [1] 4 7</code></pre>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="start.html#cb43-1"></a>x[<span class="op">-</span><span class="dv">1</span>] <span class="co"># Extracts all except the first value.</span></span></code></pre></div>
+<pre><code>## [1] 5 7</code></pre>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="start.html#cb45-1"></a>x[<span class="op">-</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>)] <span class="co"># Extracts all except the first and third values.</span></span></code></pre></div>
+<pre><code>## [1] 5</code></pre></li>
+<li><p>Using <code>Logical</code></p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="start.html#cb47-1"></a>x[<span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>)] <span class="co"># Extracts the first and second values.</span></span></code></pre></div>
+<pre><code>## [1] 4 5</code></pre>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="start.html#cb49-1"></a>y</span></code></pre></div>
+<pre><code>## [1] &quot;red&quot;    &quot;green&quot;  &quot;blue&quot;   &quot;black&quot;  &quot;orange&quot;</code></pre>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="start.html#cb51-1"></a>z</span></code></pre></div>
+<pre><code>## [1]  TRUE FALSE  TRUE  TRUE FALSE</code></pre>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="start.html#cb53-1"></a>y[z] <span class="co"># Using variables already stored. Does not extract values corresponding to FALSE items. </span></span></code></pre></div>
+<pre><code>## [1] &quot;red&quot;   &quot;blue&quot;  &quot;black&quot;</code></pre></li>
+</ul>
+</div>
+<div id="changing-values-of-a-vector" class="section level4">
+<h4><span class="header-section-number">1.2.1.3</span> Changing Value(s) of A Vector</h4>
+</div>
+<div id="sorting" class="section level4">
+<h4><span class="header-section-number">1.2.1.4</span> Sorting</h4>
+</div>
+</div>
+<div id="matrix" class="section level3">
+<h3><span class="header-section-number">1.2.2</span> Matrix</h3>
+<p>A matrix a rectangular array of similar items. Although it has more than two rows and columns, it can only contain items of a single type.</p>
+<p><span>Contents from Jafar Sir</span></p>
+</div>
+<div id="data-frame" class="section level3">
+<h3><span class="header-section-number">1.2.3</span> Data Frame</h3>
+<p>A Data frame contains many variables; each variable can be different type. Distinct variables are placed in columns and values/observations are in rows.</p>
+<p><strong>Example</strong></p>
+<table>
+<caption><span id="tab:unnamed-chunk-11">Table 1.2: </span>A Subset from mtcars Data Set</caption>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">mpg</th>
+<th align="right">cyl</th>
+<th align="right">disp</th>
+<th align="right">hp</th>
+<th align="right">drat</th>
+<th align="right">wt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Mazda RX4</td>
+<td align="right">21.0</td>
+<td align="right">6</td>
+<td align="right">160.0</td>
+<td align="right">110</td>
+<td align="right">3.90</td>
+<td align="right">2.620</td>
+</tr>
+<tr class="even">
+<td align="left">Mazda RX4 Wag</td>
+<td align="right">21.0</td>
+<td align="right">6</td>
+<td align="right">160.0</td>
+<td align="right">110</td>
+<td align="right">3.90</td>
+<td align="right">2.875</td>
+</tr>
+<tr class="odd">
+<td align="left">Datsun 710</td>
+<td align="right">22.8</td>
+<td align="right">4</td>
+<td align="right">108.0</td>
+<td align="right">93</td>
+<td align="right">3.85</td>
+<td align="right">2.320</td>
+</tr>
+<tr class="even">
+<td align="left">Hornet 4 Drive</td>
+<td align="right">21.4</td>
+<td align="right">6</td>
+<td align="right">258.0</td>
+<td align="right">110</td>
+<td align="right">3.08</td>
+<td align="right">3.215</td>
+</tr>
+<tr class="odd">
+<td align="left">Hornet Sportabout</td>
+<td align="right">18.7</td>
+<td align="right">8</td>
+<td align="right">360.0</td>
+<td align="right">175</td>
+<td align="right">3.15</td>
+<td align="right">3.440</td>
+</tr>
+<tr class="even">
+<td align="left">Valiant</td>
+<td align="right">18.1</td>
+<td align="right">6</td>
+<td align="right">225.0</td>
+<td align="right">105</td>
+<td align="right">2.76</td>
+<td align="right">3.460</td>
+</tr>
+<tr class="odd">
+<td align="left">Duster 360</td>
+<td align="right">14.3</td>
+<td align="right">8</td>
+<td align="right">360.0</td>
+<td align="right">245</td>
+<td align="right">3.21</td>
+<td align="right">3.570</td>
+</tr>
+<tr class="even">
+<td align="left">Merc 240D</td>
+<td align="right">24.4</td>
+<td align="right">4</td>
+<td align="right">146.7</td>
+<td align="right">62</td>
+<td align="right">3.69</td>
+<td align="right">3.190</td>
+</tr>
+<tr class="odd">
+<td align="left">Merc 230</td>
+<td align="right">22.8</td>
+<td align="right">4</td>
+<td align="right">140.8</td>
+<td align="right">95</td>
+<td align="right">3.92</td>
+<td align="right">3.150</td>
+</tr>
+<tr class="even">
+<td align="left">Merc 280</td>
+<td align="right">19.2</td>
+<td align="right">6</td>
+<td align="right">167.6</td>
+<td align="right">123</td>
+<td align="right">3.92</td>
+<td align="right">3.440</td>
+</tr>
+</tbody>
+</table>
+<div id="making-a-new-data-frame" class="section level4">
+<h4><span class="header-section-number">1.2.3.1</span> Making A New Data Frame</h4>
+<p><code>data.frame</code> command is used to produce a data frame.</p>
+<ul>
+<li><input type="checkbox" disabled="" checked="" />
+Length of each variable must be equal.</li>
+</ul>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="start.html#cb55-1"></a>df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x=</span><span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">12</span>, <span class="dv">15</span>),</span>
+<span id="cb55-2"><a href="start.html#cb55-2"></a>                 <span class="dt">y=</span><span class="kw">c</span>(<span class="st">&quot;Dhaka&quot;</span>, <span class="st">&quot;Cumilla&quot;</span>, <span class="st">&quot;Rajshahi&quot;</span>),</span>
+<span id="cb55-3"><a href="start.html#cb55-3"></a>                 <span class="dt">w=</span><span class="kw">sample</span>(<span class="dv">100</span>, <span class="dv">3</span>),</span>
+<span id="cb55-4"><a href="start.html#cb55-4"></a>                 <span class="dt">v=</span><span class="dv">20</span><span class="op">:</span><span class="dv">22</span>)</span></code></pre></div>
+</div>
+<div id="indexing-a-data-frame" class="section level4">
+<h4><span class="header-section-number">1.2.3.2</span> Indexing A Data Frame</h4>
+<ul>
+<li><input type="checkbox" disabled="" checked="" />
+Methods used for matrices apply.</li>
+</ul>
+<table>
+<caption><span id="tab:df">Table 1.3: </span>An Example Data Frame</caption>
+<thead>
+<tr class="header">
+<th align="right">x</th>
+<th align="left">y</th>
+<th align="right">w</th>
+<th align="right">v</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">10</td>
+<td align="left">Dhaka</td>
+<td align="right">80</td>
+<td align="right">20</td>
+</tr>
+<tr class="even">
+<td align="right">12</td>
+<td align="left">Cumilla</td>
+<td align="right">82</td>
+<td align="right">21</td>
+</tr>
+<tr class="odd">
+<td align="right">15</td>
+<td align="left">Rajshahi</td>
+<td align="right">21</td>
+<td align="right">22</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="start.html#cb56-1"></a>df[<span class="dv">2</span>,<span class="dv">3</span>] <span class="co"># Extracts value from the third column in the second row. </span></span></code></pre></div>
+<pre><code>## [1] 82</code></pre>
+</div>
+</div>
+<div id="list" class="section level3">
+<h3><span class="header-section-number">1.2.4</span> List</h3>
+<p>A list can contain scalars, vectors, matrices, data frames, as well as other lists!</p>
+</div>
+<div id="functions" class="section level3">
+<h3><span class="header-section-number">1.2.5</span> Functions</h3>
+<p>A function is used to</p>
+<ul>
+<li>avoid repetitive tasks and mistakes therefrom</li>
+<li>find values from a complicated formula</li>
+</ul>
+<p><strong>A function to compute Harmonic Mean (HM)</strong></p>
+<p><strong>Formula:</strong> Reciprocal of Mean of <span class="math inline">\(\frac{1}{x_i}\)</span></p>
+<p>Reciprocal of <span class="math inline">\(\frac{\frac{1}{x_1}+\frac{1}{x_2}+...+\frac{1}{x_n}}{n}\)</span></p>
+<p>Thus, <span class="math inline">\(HM = \frac{n}{\sum \frac{1}{x_i}} =\frac 1 {\text{Mean of 1/x}}\)</span></p>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="start.html#cb58-1"></a>hm &lt;-<span class="st"> </span><span class="cf">function</span>(x) {</span>
+<span id="cb58-2"><a href="start.html#cb58-2"></a>  <span class="dv">1</span><span class="op">/</span><span class="kw">sum</span>(<span class="dv">1</span><span class="op">/</span>x)</span>
+<span id="cb58-3"><a href="start.html#cb58-3"></a>}</span></code></pre></div>
+<p>We have, x = 4, 5, 7</p>
+<p>Therefore,</p>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="start.html#cb59-1"></a><span class="kw">hm</span>(x)</span></code></pre></div>
+<pre><code>## [1] 1.686747</code></pre>
+<p>Since this function is actually a one-liner, we can write it as</p>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="start.html#cb61-1"></a>hm &lt;-<span class="st"> </span><span class="cf">function</span>(x) <span class="dv">1</span><span class="op">/</span><span class="kw">sum</span>(<span class="dv">1</span><span class="op">/</span>x)</span></code></pre></div>
+</div>
+<div id="loops-alternatives-and-comparison-with-other-languages" class="section level3">
+<h3><span class="header-section-number">1.2.6</span> Loops (Alternatives and Comparison with Other Languages)</h3>
+<p>In R, loops are rarely used.</p>
+<div id="for-loop-example" class="section level4">
+<h4><span class="header-section-number">1.2.6.1</span> For loop example</h4>
+<p>A for loop to add numbers 1 through 10.</p>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="start.html#cb62-1"></a>sum &lt;-<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb62-2"><a href="start.html#cb62-2"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>){</span>
+<span id="cb62-3"><a href="start.html#cb62-3"></a>  sum &lt;-<span class="st"> </span>sum <span class="op">+</span><span class="st"> </span>i</span>
+<span id="cb62-4"><a href="start.html#cb62-4"></a>}</span>
+<span id="cb62-5"><a href="start.html#cb62-5"></a>sum</span></code></pre></div>
+<pre><code>## [1] 55</code></pre>
+<p>Values to loop through can also be called from a variable.</p>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="start.html#cb64-1"></a>x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">12</span>, <span class="dv">8</span>, <span class="dv">19</span>, <span class="dv">23</span>, <span class="dv">25</span>)</span>
+<span id="cb64-2"><a href="start.html#cb64-2"></a>sum &lt;-<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb64-3"><a href="start.html#cb64-3"></a><span class="cf">for</span> (i <span class="cf">in</span> x){</span>
+<span id="cb64-4"><a href="start.html#cb64-4"></a>  sum &lt;-<span class="st"> </span>sum <span class="op">+</span><span class="st"> </span>i</span>
+<span id="cb64-5"><a href="start.html#cb64-5"></a>}</span>
+<span id="cb64-6"><a href="start.html#cb64-6"></a>sum</span></code></pre></div>
+<pre><code>## [1] 97</code></pre>
+<p><span>Contents from Jafar Sir</span></p>
+</div>
+</div>
+<div id="apply-family-apply-lapply-sapply-etc.." class="section level3">
+<h3><span class="header-section-number">1.2.7</span> Apply family (apply, lapply, sapply, etc.).</h3>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="about-author.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="week-02-data-manipulation-base-r-and-tidyverse.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-start.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["rstat.pdf", "rstat.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
