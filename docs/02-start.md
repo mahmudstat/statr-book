@@ -22,11 +22,11 @@ Table: (\#tab:unnamed-chunk-1)A Subset from Iris Data Set
 |          5.4|         3.9|          1.7|         0.4|setosa  |
 
 - **Technique of dealing with data**
-  + Collecting data
-  + Organizing 
-  + Analyzing
-  Interpreting
-  + Presenting
+  + Collection
+  + Organization
+  + Analysis (such as *regression analysis*)
+  + Interpretation
+  + Presentation
   
 
 ### Statistics vs Data Science
@@ -501,9 +501,9 @@ Table: (\#tab:df)An Example Data Frame
 
 |  x|y        |  w|  v|
 |--:|:--------|--:|--:|
-| 10|Dhaka    | 94| 20|
-| 12|Cumilla  | 31| 21|
-| 15|Rajshahi | 64| 22|
+| 10|Dhaka    | 47| 20|
+| 12|Cumilla  | 90| 21|
+| 15|Rajshahi |  4| 22|
 
 
 ```r
@@ -511,7 +511,7 @@ df[2,3] # Extracts value from the third column in the second row.
 ```
 
 ```
-## [1] 31
+## [1] 90
 ```
 
 ### List

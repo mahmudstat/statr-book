@@ -1,4 +1,4 @@
-# Advanced Data Warngling  with Tidyverse {#tidy-2}
+# Advanced Tidyverse {#tidy-2}
 
 ## Advanced Visualization
 

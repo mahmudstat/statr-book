@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.6.29) (preloaded format=xelatex 2020.10.25)  26 OCT 2020 19:29
+This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.6.29) (preloaded format=xelatex 2020.10.25)  26 OCT 2020 20:56
 entering extended mode
 **./rstat.tex
 (rstat.tex
@@ -965,9 +965,9 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 Chapter 1.
 [9] [10]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 349.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 350.
 [11] [12] [13] [14]
-Overfull \hbox (59.25pt too wide) in paragraph at lines 682--682
+Overfull \hbox (59.25pt too wide) in paragraph at lines 683--683
 []\TU/lmtt/m/n/10 ## Warning in x + b: longer object length is not a multiple o
 f shorter object[] 
  []
@@ -1004,40 +1004,38 @@ E TIDYVERSE
 [24]
 Chapter 4.
 
-Underfull \hbox (badness 1655) in paragraph at lines 1182--1182
+Underfull \hbox (badness 1655) in paragraph at lines 1183--1183
 []\TU/lmr/bx/n/12 Advanced Customization And Attaining What
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 [25
 
-]
-Overfull \vbox (0.40594pt too high) has occurred while \output is active []
+] [26
 
-[26]
+]
 Chapter 5.
-No file rstat.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1203.
-[27
+[27] [28
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1203.
+Chapter 6.
+No file rstat.bbl.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1264.
+[29]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1264.
 (rstat.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1203.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1203.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1264.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1264.
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 19101 strings out of 414071
- 333107 string characters out of 2893570
- 784450 words of memory out of 3000000
- 36493 multiletter control sequences out of 15000+200000
+ 19125 strings out of 414071
+ 333570 string characters out of 2893570
+ 785499 words of memory out of 3000000
+ 36517 multiletter control sequences out of 15000+200000
  538829 words of font info for 82 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
  58i,8n,118p,806b,404s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on rstat.pdf (27 pages).
+Output written on rstat.pdf (29 pages).
