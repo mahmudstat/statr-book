@@ -12,7 +12,8 @@ pie(
      c(280, 180, 130),
      c('Sky', 'Sunny', 'Shady side'),
      col = c('#0292D8', '#F7EA39', '#C4B632'),
-     init.angle = 130, border = NA )
+     init.angle = 130, border = NA,
+     main = "A Sample Pie Chart")
 ```
 
 ![](03-analysis-base_files/figure-epub3/unnamed-chunk-1-1.png)<!-- -->

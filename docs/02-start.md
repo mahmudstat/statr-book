@@ -501,9 +501,9 @@ Table: (\#tab:df)An Example Data Frame
 
 |  x|y        |  w|  v|
 |--:|:--------|--:|--:|
-| 10|Dhaka    | 45| 20|
-| 12|Cumilla  | 20| 21|
-| 15|Rajshahi | 61| 22|
+| 10|Dhaka    | 94| 20|
+| 12|Cumilla  | 31| 21|
+| 15|Rajshahi | 64| 22|
 
 
 ```r
@@ -511,7 +511,7 @@ df[2,3] # Extracts value from the third column in the second row.
 ```
 
 ```
-## [1] 20
+## [1] 31
 ```
 
 ### List

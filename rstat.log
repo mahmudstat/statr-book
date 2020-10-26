@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.6.29) (preloaded format=xelatex 2020.10.25)  26 OCT 2020 19:19
+This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.6.29) (preloaded format=xelatex 2020.10.25)  26 OCT 2020 19:29
 entering extended mode
 **./rstat.tex
 (rstat.tex
@@ -1004,7 +1004,7 @@ E TIDYVERSE
 [24]
 Chapter 4.
 
-Underfull \hbox (badness 1655) in paragraph at lines 1181--1181
+Underfull \hbox (badness 1655) in paragraph at lines 1182--1182
 []\TU/lmr/bx/n/12 Advanced Customization And Attaining What
  []
 
@@ -1019,14 +1019,14 @@ Overfull \vbox (0.40594pt too high) has occurred while \output is active []
 [26]
 Chapter 5.
 No file rstat.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1202.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1203.
 [27
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1202.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1203.
 (rstat.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1202.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1202.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1203.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1203.
 
 LaTeX Warning: There were multiply-defined labels.
 
