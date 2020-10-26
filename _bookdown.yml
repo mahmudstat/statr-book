@@ -3,3 +3,7 @@ language:
   ui:
     chapter_name: "Chapter "
 delete_merged_file: true
+output_dir: "docs"
+chapter_name: "Chapter "
+repo: https://github.com/mahmudstat/statr-book
+new_session: yes
