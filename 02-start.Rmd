@@ -45,6 +45,8 @@ The salaries from month to month would unpredictably vary, which is where statis
 
 They will be briefly explained later when the relevant `R` codes are mentioned. They include various charts, concepts of central tendency and dispersion, correlation, regression, test of hypothesis, among others. 
 
+## Introdcution to R
+
 ### Why R? 
 
 R is the most popular programming language for statistical analysis, second most popular for machine learning. 
@@ -162,7 +164,26 @@ Before being able to make use of a package, one must load the package, by runnin
 
 #### Arithmetic Operators
 
+|       Purpose       |   Operator  |  Example |   Output   |
+|:-------------------:|:-----------:|:--------:|:----------:|
+|       Addition      |     `+`     |   `2+3`  |   `r 2+3`  |
+|     Subtraction     |     `-`     |  `10-9`  |  `r 10-9`  |
+|    Multiplication   |     `*`     |  `10*8`  |  `r 10*8`  |
+|       Division      |     `/`     |  `10/5`  |  `r 10/5`  |
+|       Exponent      | `^` or `**` |  `10^2`  |  `r 10^2`  |
+| Modulus (Remainder) |     `%%`    |  `10%%4` |  `r 10%%4` |
+|   Integer Division  |    `%/%`    | `12%/%5` | `r 12%/%5` |
+
 #### Relational Operators
+
+|          Purpose         |   Operator  | Example |   Output  |
+|:------------------------:|:-----------:|:-------:|:---------:|
+|         Less than        |     `<`     |  `2<3`  |  `r 2+3`  |
+|       Greater than       |     `>`     |  `10>11`|  `r 10-9` |
+|   Less than or equal to  |     `<=`    |  `10<=8`|  `r 10*8` |
+| Greater than or equal to |     `>=`    |  `10>=5` |  `r 10/5` |
+|         Equal to         |     `==`    |  `10^2==100` |  `r 10^2` |
+|       Not equal to       |     `!=`    | `100!=99` | `r 10%%4` |
 
 #### Logical Operators
 
@@ -236,8 +257,6 @@ seq(1,50, length.out = 5) # Generating specific amount of numbers.
 - [x] Stat Mania artciles and link to contents
 - [x] Books
 - [x] Coursera, Edx, and other MOOCs. 
-
-## Segemnt 02
 
 ### Vector
 

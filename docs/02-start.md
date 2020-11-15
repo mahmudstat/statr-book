@@ -1,12 +1,12 @@
-# Getting Started with Statistics and R {#start}
+# Introdcution to Statistics and R {#start}
 
-## Segment 01
+## Statistics
 
 ### What is Statistics? 
 
 The term has got three different meanings. 
 
-- **Plural of the term statistic**, which refers to any function of sample values, for example, $\bar x = \frac {\sum_i^n x_i} n$
+- **Plural of the term *statistic* **, which refers to any function of sample values, for example, $\bar x = \frac {\sum_i^n x_i} n$
 - **Table of values**
 
 
@@ -49,6 +49,12 @@ Where, $R$ is the revenue the company earns through the employee. In this case, 
 
 The salaries from month to month would unpredictably vary, which is where statistics comes in. Statistics deals with randomness, situations where we cannot exactly tell which outcome we might get. We may (or may not) know the possible outcomes (like when tossing a coin, we know the possible outcome, but which will happen)
 
+### Other Statistical Concepts
+
+They will be briefly explained later when the relevant `R` codes are mentioned. They include various charts, concepts of central tendency and dispersion, correlation, regression, test of hypothesis, among others. 
+
+## Introdcution to R
+
 ### Why R? 
 
 R is the most popular programming language for statistical analysis, second most popular for machine learning. 
@@ -61,6 +67,7 @@ Reasons at a glance
 - Easy to use codes
 - Stunning graphics, esp. with *ggplot2*
 - Reproducibility
+- Runs on a wide array of platforms, including but not limited to Windows, Linux, and Mac OS X. 
 
 
 ### Who Use R? 
@@ -72,14 +79,21 @@ R is both used in academia and industry.
 
 Some of the renowned companies using R are:
 
-- Google
-- Facebook
-- Twitter (Tweet sensitivity analysis)
+- Google (effective advertising and forecasting)
+- Facebook (behavioral analysis)
+- Twitter (sensitivity analysis)
+- Microsoft
+- Uber
+- Airbnb
+- IBM
+- ANZ
+- HP
+- Ford
 
 
 ### Who Developed R? 
 
-R was developed by Ross Ihaka and Robert Genetleman (<span>MORE</span>)
+R was developed by Ross Ihaka and Robert Gentleman (statistician from New Zealand and Canada, respectively). 
 
 ### Other Languages and Packages
 
@@ -104,7 +118,7 @@ Some other languages for data analysis are:
 
 ### Start Writing R Code (Windows, Linux, and Command Line)
 
-- Using R Console directly: Not a good idea
+- Using R Console directly: write code and press enter (NOT a good method)
 - Using Rstudio Console: Equivalent to using R console
 - Using R Script from Rstudio: to run, press `Ctrl + Enter`
 
@@ -113,16 +127,23 @@ Some other languages for data analysis are:
 ### Effectively Using Rstudio
 
 - **Keep things organized**
-- **Make a project** Put all codes, data and output inside that project directory. 
-- **Use `View` function** to view data tables. 
+- **Make a project** Put all codes, data, and output inside that project directory. 
+- **Use `View` function** to view data tables, for example `View(iris)`, which displays the `iris` data set. 
 
 ### R Script
 
-An R script is a convenient tool to organize a work. A project may consist of several or many such scripts. They can be easily shared with others. 
+An R script is a convenient tool to organize a work. A project may consist of several or many such scripts. They can be easily shared with others. An R script has the extension `.R` or `.r`. 
+
+**Tips**
+
+- [x] Use line gaps often to separate code segments
+- [x] Add comments explaining codes, so others (including future you) can understand what they mean. 
 
 #### Quoting R codes from another R file. 
 
 `source('r_file.R')`
+
+Thus, you can use functions, data, variables etc. defined or saved elsewhere. 
 
 ### R Documentation (Help)
 
@@ -132,15 +153,15 @@ For example, `?mean` would show options and examples for the mean function.
 
 ### Handling Error
 
-- If the code is not run, and shows a `+` sign, it means the code is not complete yet complete it or press `esc` to start over. 
-- If the erros message shows `could not find function ...`, correct the function name. 
+- If the code is not run, and shows a `+` sign, it means the code is not complete yet; complete it or press `esc` to start over. 
+- If the error message shows `could not find function ...`, correct the function name. 
 - If you do not understand the error message, copy and paste it to your browser search bar, and see what help the community has to offer. 
 
 ### R Packages 
 
 R packages are extensions of base R, providing some very useful tasks. Many R packages made R more popular and useful, such as `ggplot2`, `karet`, and `rmarkdown`. 
 
-To install a packages, run `install.pckages("package_name")`, for example `install.pckages("tidyverse")` installs the package `tidyverse`. When installing, the package name must be enclosed within quotation marks (" "). 
+To install a package, run `install.packages("package_name")`, for example `install.packages("tidyverse")` installs the package `tidyverse`. When installing, the package name must be enclosed within quotation marks (" "). 
 
 Before being able to make use of a package, one must load the package, by running `library(package_name)`, for example, to load `ggplot2`, run `library(ggplot2)`, this time without quotation marks (" ").
 
@@ -148,6 +169,33 @@ Before being able to make use of a package, one must load the package, by runnin
 ### R Mathematical Operations
 
 - [ ] Make a table: Purpose, code, example, output
+
+#### Arithmetic Operators
+
+|       Purpose       |   Operator  |  Example |   Output   |
+|:-------------------:|:-----------:|:--------:|:----------:|
+|       Addition      |     `+`     |   `2+3`  |   5  |
+|     Subtraction     |     `-`     |  `10-9`  |  1  |
+|    Multiplication   |     `*`     |  `10*8`  |  80  |
+|       Division      |     `/`     |  `10/5`  |  2  |
+|       Exponent      | `^` or `**` |  `10^2`  |  100  |
+| Modulus (Remainder) |     `%%`    |  `10%%4` |  2 |
+|   Integer Division  |    `%/%`    | `12%/%5` | 2 |
+
+#### Relational Operators
+
+|          Purpose         |   Operator  | Example |   Output  |
+|:------------------------:|:-----------:|:-------:|:---------:|
+|         Less than        |     `<`     |  `2<3`  |  5  |
+|       Greater than       |     `>`     |  `10>11`|  1 |
+|   Less than or equal to  |     `<=`    |  `10<=8`|  80 |
+| Greater than or equal to |     `>=`    |  `10>=5` |  2 |
+|         Equal to         |     `==`    |  `10^2==100` |  100 |
+|       Not equal to       |     `!=`    | `100!=99` | 2 |
+
+#### Logical Operators
+
+#### Mathematical Functions
 
 ### Assigning Values
 
@@ -298,8 +346,6 @@ seq(1,50, length.out = 5) # Generating specific amount of numbers.
 - [x] Stat Mania artciles and link to contents
 - [x] Books
 - [x] Coursera, Edx, and other MOOCs. 
-
-## Segemnt 02
 
 ### Vector
 
@@ -501,9 +547,9 @@ Table: (\#tab:df)An Example Data Frame
 
 |  x|y        |  w|  v|
 |--:|:--------|--:|--:|
-| 10|Dhaka    | 47| 20|
-| 12|Cumilla  | 90| 21|
-| 15|Rajshahi |  4| 22|
+| 10|Dhaka    | 17| 20|
+| 12|Cumilla  | 91| 21|
+| 15|Rajshahi | 77| 22|
 
 
 ```r
@@ -511,7 +557,7 @@ df[2,3] # Extracts value from the third column in the second row.
 ```
 
 ```
-## [1] 90
+## [1] 91
 ```
 
 ### List
@@ -601,3 +647,4 @@ sum
 
 ### Apply family (apply, lapply, sapply, etc.). 
 
+[^1]: https://cran.r-project.org
